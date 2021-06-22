@@ -1,13 +1,16 @@
+using FluentAssertions;
+using NUnit.Framework;
+
 namespace MarsRoverKata.Tests.NUnit
 {
-    using global::NUnit.Framework;
-
     public class RoverTests
     {
         [Test]
         public void ThisTestShouldPass()
         {
-            Assert.Pass();
+            var instance = new Rover();
+
+            instance.ToString().Should().NotBeNull();
         }
     }
 }

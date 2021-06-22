@@ -1,13 +1,17 @@
+using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 namespace MarsRoverKata.Tests.MsTest
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     [TestClass]
-    public class UnitTest1
+    public class RoverTests
     {
         [TestMethod]
         public void ThisTestShouldPass()
         {
+            var instance = new Rover();
+
+            instance.ToString().Should().NotBeNull();
         }
     }
 }
